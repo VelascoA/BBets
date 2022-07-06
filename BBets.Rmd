@@ -57,7 +57,7 @@ options(digits=1)
 print(paste(lcl,ucl))
 ```
 
-The lower end is `r lcl` to the upper end which is `r ucl`.
+The lower end is `r lcl` to the upper end which is `r ucl`. This data shows that it is consistant with ensuring that the one making the bet will always win making it un extremly unfair wager.
 
 
 
