@@ -53,9 +53,11 @@ for(i in 1:40)
 favstats(Array40)
 lcl<-mean(Array40)-2*sd(Array40)
 ucl<-mean(Array40)-2*sd(Array40)
+options(digits=1)
 print(paste(lcl,ucl))
 ```
 
+The lower end is `r lcl` to the upper end which is `r ucl`.
 
 
 
