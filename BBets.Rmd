@@ -66,8 +66,20 @@ The lower end is `r lcl` to the upper end which is `r ucl`. This data shows that
 
 <!--Decide on your methods:  In this section explain the approach you will take to attack the issue --- how will you decide on a likely estimate of professor Brownlow's earnings or losses after 637 bets. Also explain how you construct a 95% confidence interval about your estimate of his winnings !-->
 
+```{r}
+Odd40<-vector("numeric")
+for(i in 1:100)
+{Odd40[i]<-BrLw( odds = 4.389)}
 
+favstats(Odd40)
+lcl<-mean(Odd40)-2*sd(Odd40)
+ucl<-mean(Odd40)-2*sd(Odd40)
+options(digits=1)
+print(paste(lcl,ucl))
 
+```
+
+Adjusting the odds in Brownlow's bet to 4.389 and making the amount of people n the class 1,000 is when the bet becomes pretty even with brown low often losing $2 or only making couple of cents. It can be seen with a mean of `r mean(Odd40)` and the lowest amount made being `r lcl`, while the highest possible amount he can make would be `r ucl`.  
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
 
