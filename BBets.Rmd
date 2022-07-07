@@ -73,20 +73,31 @@ for(i in 1:100)
 
 favstats(Odd40)
 lcl<-mean(Odd40)-2*sd(Odd40)
-ucl<-mean(Odd40)-2*sd(Odd40)
+ucl<-mean(Odd40)+2*sd(Odd40)
 options(digits=1)
 print(paste(lcl,ucl))
 
 ```
 
-Adjusting the odds in Brownlow's bet to 4.389 and making the amount of people n the class 1,000 is when the bet becomes pretty even with brown low often losing $2 or only making couple of cents. It can be seen with a mean of `r mean(Odd40)` and the lowest amount made being `r lcl`, while the highest possible amount he can make would be `r ucl`.  
+Adjusting the odds in Brownlow's bet to 4.389 is when the bet becomes pretty even with brown low often losing $2 or only making couple of cents. It can be seen with a mean of `r mean(Odd40)` and the lowest amount made being `r lcl`, while the highest possible amount he can make would be `r ucl`.  
 
 # What size of class makes the 2:1 bet fair?  Use manipulation of number of Students to tune Brownlows earnings to zero.
 
 <!--Explain and display the results of your method of coming up with the estimate of professor Brownlows betting profits!-->
 
 
+```{r}
+Class40<-vector("numeric")
+for(i in 1:100)
+{Class40[i]<-BrLw( odds = 4.389)}
 
+favstats(Class40)
+lcl<-mean(Class40)-2*sd(Class40)
+ucl<-mean(Class40)+ 2*sd(Class40)
+options(digits=1)
+print(paste(lcl,ucl))
+
+```
 
 
 
