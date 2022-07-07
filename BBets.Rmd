@@ -52,7 +52,7 @@ for(i in 1:40)
 
 favstats(Array40)
 lcl<-mean(Array40)-2*sd(Array40)
-ucl<-mean(Array40)-2*sd(Array40)
+ucl<-mean(Array40)+2*sd(Array40)
 options(digits=1)
 print(paste(lcl,ucl))
 ```
@@ -89,7 +89,7 @@ Adjusting the odds in Brownlow's bet to 4.389 is when the bet becomes pretty eve
 ```{r}
 Class40<-vector("numeric")
 for(i in 1:100)
-{Class40[i]<-BrLw( odds = 4.389)}
+{Class40[i]<-BrLw(numClass = 28)}
 
 favstats(Class40)
 lcl<-mean(Class40)-2*sd(Class40)
@@ -99,9 +99,7 @@ print(paste(lcl,ucl))
 
 ```
 
-
-
-
+Adjusting the bet to make it fair with the amount of people, the class must be made up of 28 people, this was the whole number than brought us closest to the mean of zero. The mean being `r mean(Class40)` the lowest amount of people need to make this fair would be `r lcl` and the highest amount of people would be `r ucl`.
 
 # Discussion and Conclusion
 
