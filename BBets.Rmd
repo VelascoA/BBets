@@ -99,9 +99,11 @@ print(paste(lcl,ucl))
 
 ```
 
-Adjusting the bet to make it fair with the amount of people, the class must be made up of 28 people, this was the whole number than brought us closest to the mean of zero. The mean being `r mean(Class40)` the lowest amount of people need to make this fair would be `r lcl` and the highest amount of people would be `r ucl`.
+Adjusting the bet to make it fair with the amount of people, the class must be made up of 28 people, this was the whole number than brought us closest to the mean of zero. The mean being `r mean(Class40)` the lowest amount of earnings would be `r lcl` and the highest amount of earnings would be `r ucl`.
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If professor Brownlow is consistantly making or losing money how could he change his payout so that his profits center on zero?  Also discuss what size his class should be in order to have his current scheme balance at zero profit.!-->
+
+
 
